@@ -16,7 +16,7 @@
     <header class="cabeçalho">
         <div class="container">
             <input type="checkbox" id="menu" class="container__botão">
-            <label for="menu">
+            <label for="menu" class="container__rotulo">
         <span class="cabeçalho__menu-hamburger container__imagem"></span>
             </label>
             <ul class="lista-menu">
@@ -32,30 +32,51 @@
     </div>
 
     <ul class="opções">
-        <li class="opções__item">Categorias</li>
+        <input type="checkbox" id="opções-menu" class="opções__botão">
+        <label for="opções-menu" class="opções__rotulo">
+            <li class="opções__item">Categorias</li>
+        </label>
+        <ul class="lista-menu">
+            <li class="lista-menu__item"><a href="#" class="lista-menu__link"> Programação </a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__link"> Front-end </a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__link"> Infraestrutura </a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__link"> Business </a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__link"> Desing & UX </a></li>
+        </ul>
         <li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
-        <li class="opções__item"><a href="#" class="opções__link">Minha estante</a></li>
+        <li class="opções__item"><a href="#" class="opções__link">Minha estante </a></li>
     </ul>
+
     <div class="conteiner">
-        <a href="#"><img src="img/Favoritos.svg" alt="meus Favoritos" class="container__imagem"></a>
-        <a href="#"><img src="img/Compras.svg" alt="carrinho de Compras" class="container__imagem"></a>
-        <a href="#"><img src="img/Usuario.svg" alt="meu perfil" class="container__imagem"></a>
+        <a href="#"><img src="img/Favoritos.svg" alt="meus Favoritos" class="container__imagem container__imagem-transparente"></a>
+        <a href="#" class="container__link">
+            <img src="img/Compras.svg" alt="carrinho de Compras" class="container__imagem">
+            <p class="container__texto">Minha sacola</p>
+        </a>
+        <a href="#" class="container__link">
+            <img src="img/Usuario.svg" alt="meu perfil" class="container__imagem">
+            <p class="container__texto">Meu perfil</p>
+        </a>
     </div>
     </header>
+
+
     <section class="banner">
         <h2 class="banner__titulo">Já sabe por onde começar?</h2>
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
     </section>
 
+
+
     <section class="carrossel">
         <h2 class="carrossel__titulo">Novos Lançamentos</h2>
         <!-- Slider main container -->
+     <div class="carrossel__container">
     <div class="swiper">
 
           <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
-
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
@@ -65,12 +86,14 @@
       <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="Livro sobre Apache Kafka"></div>
       <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre Portugol"></div>
       <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="Livro sobre Acessibilidade"></div>
-      ...
     </div>
   
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
+     
+    </div>
+
 
     <div class="card">
         <!-- 1 linha-->
@@ -95,11 +118,15 @@
             <a href="#" class="botões__ancora">Saiba mais</a>
         </div>
     </div>
-  
+    </div>
+
+
 
 <section class="carrossel">
-    <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+    <h2 class="carrossel__titulo">Mais vendidos</h2>
     <!-- Slider main container -->
+
+   <div class="carrossel__container">
 <div class="swiper">
 
       <!-- If we need pagination -->
@@ -114,12 +141,14 @@
   <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="Livro sobre Apache Kafka"></div>
   <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre Portugol"></div>
   <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="Livro sobre Acessibilidade"></div>
-  ...
 </div>
 
 <!-- If we need navigation buttons -->
 <div class="swiper-button-prev"></div>
 <div class="swiper-button-next"></div>
+
+</div>
+
 
 <div class="card">
     <!-- 1 linha-->
@@ -134,6 +163,8 @@
         <!--2 coluna-->
         <img src="img/Escritora.svg" alt="" class="descrição__imagem">
     </div>
+
+
     <!--2 linha -->
     <div class="card__botões">
         <!--1 coluna-->
@@ -145,6 +176,9 @@
         <a href="#" class="botões__ancora">Saiba mais</a>
     </div>
 </div>
+   </div>
+
+
 </section>
 
 <section class="tópicos">
@@ -184,9 +218,12 @@
     </ul>
 </section>
 
+
 <section class="contato">
+    <div class="contato__descrição">
     <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
     <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+    </div>
     <input type="email" placeholder="Cadastre seu e-mail" class="contato__email">
 </section>
 
@@ -194,6 +231,97 @@
 
 <footer class="rodapé">
     <h2 class="rodapé__titulo">Grupo Alura</h2>
+    <ul class="lista-rodapé">
+        <li class="lista-rodapé__titulo">Educação</li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/Caelum.svg" alt="Logo da Caelum ">
+            <a href="#" class="lista-rodapé__link">Caelum</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/CasaDoCodigo.svg" alt="Logo da Casa do Código">
+            <a href="#" class="lista-rodapé__link">Casa do Código</a>
+        </li>
+    </ul>
+     
+    <ul class="lista-rodapé">
+        <li class="lista-rodapé__titulo">Educação Online</li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/Alura.svg" alt="Logo da Alura">
+            <a href="#" class="lista-rodapé__link"> Alura</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/AluraEmpresas.svg" alt="Logo da Alura Empresas">
+            <a href="#" class="lista-rodapé__link"> Alura Empresas</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/AluraLatam.svg" alt="Logo da Alura Latam">
+            <a href="#" class="lista-rodapé__link"> Alura Latam</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/AluraStart.svg" alt="Logo da Alura Start">
+            <a href="#" class="lista-rodapé__link"> Alura Start</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/MusicDot.svg" alt="Logo do Music Dot">
+            <a href="#" class="lista-rodapé__link"> Music Dot</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/AluraLingua.svg" alt="Logo da Alura Lingua">
+            <a href="#" class="lista-rodapé__link"> Alura Lingua</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/PM3.svg" alt="Logo do PM3">
+            <a href="#" class="lista-rodapé__link"> PM3 </a>
+        </li>
+    </ul>
+
+    <ul class="lista-rodapé">
+        <li class="lista-rodapé__titulo"> Comunidade </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/HipstersTech.svg" alt="Logo da Hipsters Ponto Tech">
+            <a href="#" class="lista-rodapé__link"> Hipsters Ponto Tech</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/Scuba.svg" alt="Logo da Scuba Dev">
+            <a href="#" class="lista-rodapé__link"> Scuba Dev</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/Layers.svg" alt="Logo da Layers Ponto Tech">
+            <a href="#" class="lista-rodapé__link"> Layers Ponto Tech</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/LikeABoss.svg" alt="Logo da Like A Boss">
+            <a href="#" class="lista-rodapé__link">Like A Boss</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/CarreiraSemFronteira.svg" alt="Logo da Carreira Sem Fronteira">
+            <a href="#" class="lista-rodapé__link">Carreira Sem Fronteira</a>
+        </li>
+
+        <li class="lista-rodapé__item">
+            <img src="img/HipstersJobs.svg" alt="Logo da Hipsters Ponto Jobs">
+            <a href="#" class="lista-rodapé__link"> Hipsters Ponto Jobs</a>
+        </li>   
+
+        <li class="lista-rodapé__item">
+            <img src="img/GUJ.svg" alt="Logo da GUJ">
+            <a href="#" class="lista-rodapé__link"> GUJ</a>
+        </li>
+    </ul>
 
 </footer>
 
@@ -212,4 +340,6 @@
 
 
 </body>
+
+
 </html>
